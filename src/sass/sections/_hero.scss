@@ -20,9 +20,13 @@
 
   // If you want to set a background image on the hero section, uncomment these with your custom image
 
-  /* background: url("/src/assets/[your-image].png");
+  //Hero BackGround Image comment out if just want blank
+  
+  background: url("/src/assets/hero_background/darkmoonblue2.gif");
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
+  
+  //END unCOMMENT HERE
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
