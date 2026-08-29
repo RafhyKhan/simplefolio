@@ -10,6 +10,9 @@ body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   scroll-behavior: smooth;
+  background-color: var(--bg-page);
+  color: var(--text-page);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Scrollbar */
@@ -18,10 +21,10 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #2e9dff;
+  background: var(--accent-1);
 }
 ::-webkit-scrollbar-thumb {
-  background: $light-grey;
+  background: var(--border);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: grey;

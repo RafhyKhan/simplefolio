@@ -15,6 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="assets/profileDefault.png" />
 
+    <!-- Applies a saved light-mode preference before first paint. Dark is the
+         default/primary theme, so no attribute is set unless "light" was saved. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Todo: put here your site title -->
     <title>[RAFHY KHAN] | Industrial Automator</title>
     <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
@@ -39,6 +51,17 @@
   <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
   <body>
     <div id="top"></div>
+
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Toggle light and dark mode"
+      title="Toggle light and dark mode"
+    >
+      <i class="fa fa-sun-o" aria-hidden="true"></i>
+      <i class="fa fa-moon-o" aria-hidden="true"></i>
+    </button>
 
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
@@ -111,7 +134,7 @@
                 -->
                   <!-- Social Media Links, comes from footer-->
                   <div class="social-links">
-                      <a rel="noreferrer" href="https://www.linkedin.com/in/rafhy-khan-5a1817400/" target="_blank">
+                      <a rel="noreferrer" href="https://www.linkedin.com/in/rafhy-k-5a1817400/" target="_blank">
                         <i class="fa fa-linkedin fa-inverse"></i>
                       Linkedln</a>
                       <a>&nbsp;</a>
@@ -379,6 +402,44 @@ This is the problem Second Brain was built to solve. Not storage — that part w
           </div>
           <!-- /END Project -->
 
+          <!-- **** Home Lab Sub-Section (smaller side projects) **** -->
+          <div class="homelab load-hidden">
+            <div class="homelab__intro">
+              <h3 class="homelab__intro-title">Home Lab — Practical Automation &amp; Infrastructure</h3>
+              <p class="homelab__intro-subtitle">
+                Built out of genuine day-to-day need, not as a resume exercise.
+              </p>
+            </div>
+            <div class="homelab__grid">
+              <div class="homelab__card">
+                <h4 class="homelab__card-title">Home Assistant</h4>
+                <p class="homelab__card-text">
+                  Runs continuously on a self-hosted NAS, automating real devices (smart plugs, the irrigation pump)
+                  without needing a phone app open or a cloud service in the loop. This is the same instance RainAI
+                  and the irrigation project run alongside.
+                </p>
+              </div>
+              <div class="homelab__card">
+                <h4 class="homelab__card-title">AdGuard</h4>
+                <p class="homelab__card-text">
+                  Network-wide DNS filtering, self-hosted. Blocks ad and tracker DNS queries across every device on
+                  the network before they load, no per-device setup. A genuinely noticeable, measurable speed and
+                  privacy improvement, not just "installed and forgot about it."
+                </p>
+              </div>
+              <div class="homelab__card">
+                <h4 class="homelab__card-title">Self-hosted NAS (Docker, Tailscale)</h4>
+                <p class="homelab__card-text">
+                  15TB of storage replacing paid cloud services, with Docker running everything above plus secure
+                  remote access via Tailscale, no exposed ports.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /END Home Lab Sub-Section -->
+
+          <h3 class="older-projects-divider">Earlier Projects</h3>
+
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
@@ -468,7 +529,7 @@ This is the problem Second Brain was built to solve. Not storage — that part w
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
-          <a rel="noreferrer" href="https://www.linkedin.com/in/rafhy-khan-5b7376174/" target="_blank">
+          <a rel="noreferrer" href="https://www.linkedin.com/in/rafhy-k-5a1817400/" target="_blank">
             <i class="fa fa-linkedin fa-inverse"></i>
           Linkedln</a>
           <a>&nbsp;</a>

@@ -1,0 +1,26 @@
+// THEME TOKENS
+// Dark is the default/primary mode (no [data-theme] attribute = dark).
+// JS (see scripts/themeToggle.js) toggles [data-theme="light"] on <html>.
+
+:root {
+  // Dark theme (default)
+  --bg-page: #0b0e14;
+  --bg-elevated: #151b23;
+  --text-page: #e9edf1;
+  --border: #26303b;
+  --accent-1: #2be3c4;
+  --accent-2: #6c7bff;
+  // The hero background image is a light illustration, so it needs a dark
+  // scrim behind it in dark mode to stay readable and on-theme.
+  --hero-overlay: rgba(6, 9, 14, 0.72);
+}
+
+:root[data-theme="light"] {
+  --bg-page: #ffffff;
+  --bg-elevated: #f5f7fa;
+  --text-page: #272341;
+  --border: #d2d2d2;
+  --accent-1: #2e9dff;
+  --accent-2: #8cbbfa7c;
+  --hero-overlay: rgba(0, 0, 0, 0);
+}

@@ -58,6 +58,13 @@ export const targetElements = [
     },
   },
   {
+    element: ".homelab",
+    animation: {
+      delay: 500,
+      origin: "bottom",
+    },
+  },
+  {
     element: ".contact-wrapper",
     animation: {
       delay: 800,

@@ -35,7 +35,7 @@ a:hover {
 }
 
 .dark-blue-text {
-  color: $dark-blue-text !important;
+  color: var(--text-page) !important;
 }
 
 .text-color-main {
@@ -44,7 +44,7 @@ a:hover {
   // Responsive text purple style
   @include respond(phone) {
     background-image: none;
-    -webkit-text-fill-color: $secondary-color;
+    -webkit-text-fill-color: var(--accent-2);
   }
 
   &:hover {

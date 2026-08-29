@@ -6,7 +6,7 @@
   border-bottom: 0px;
   background: $white-color;
   font-weight: 400;
-  color: $dark-blue-text;
+  color: var(--text-page);
   padding: 0rem 5.6rem;
   margin-bottom: 0;
   top: 0;
@@ -21,11 +21,15 @@
   // If you want to set a background image on the hero section, uncomment these with your custom image
 
   //Hero BackGround Image comment out if just want blank
-  
-  background: url("/src/assets/hero_background/darkmoonblue2.gif");
+
+  // The image itself is a light illustration; --hero-overlay layers a dark
+  // scrim on top of it in dark mode (transparent in light mode) so the hero
+  // stays readable and on-theme either way.
+  background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("/src/assets/hero_background/darkmoonblue2.gif");
   background-position: center;
   background-size: cover;
-  
+
   //END unCOMMENT HERE
 
   @include respond(phone) {
